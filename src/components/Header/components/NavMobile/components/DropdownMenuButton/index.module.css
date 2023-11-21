@@ -1,0 +1,61 @@
+.button {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 5px 0;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  background-color: var(--header-bgr);
+}
+
+.button span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  font-size: 0;
+  background-color: black;
+  transform-origin: center center;
+  transition: width var(--transition) ease-in-out,
+    background var(--transition) ease-in-out,
+    transform var(--transition) ease-in-out, top var(--transition) ease-in-out;
+}
+
+.button::after,
+.button::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  transform-origin: center center;
+  transition: width var(--transition) ease-in-out,
+    background var(--transition) ease-in-out,
+    transform var(--transition) ease-in-out, top var(--transition) ease-in-out,
+    bottom var(--transition) ease-in-out, right var(--transition) ease-in-out,
+    left var(--transition) ease-in-out;
+}
+
+.button::after {
+  top: 5px;
+}
+
+.button::before {
+  bottom: 5px;
+}
+
+.buttonOpen span {
+  display: none;
+}
+
+.button.buttonOpen::after {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
+.button.buttonOpen::before {
+  bottom: 11px;
+  transform: rotate(-45deg);
+}

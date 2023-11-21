@@ -1,0 +1,29 @@
+.mobile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7.734% 4.27%;
+  z-index: 1;
+  background-color: var(--header-bgr);
+}
+
+.mainLogo {
+  width: 24px;
+  height: 26.34px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  width: 100%;
+}
+
+@media (min-width: 426px) {
+  .mobile {
+    display: none;
+  }
+
+  .dropdownMenu {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0 4.27%;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  background-color: var(--header-bgr);
+}
+
+.active {
+  transform: translateY(0);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+}
+
+.navItem:not(:last-child) {
+  border-bottom: 1px solid var(--menu-bottom-border);
+}

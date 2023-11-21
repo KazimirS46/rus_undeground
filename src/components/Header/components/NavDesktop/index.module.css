@@ -1,0 +1,46 @@
+.navDesktopWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2.25rem 0 2.6875rem;
+}
+
+.logoLink {
+  width: 2.5625rem;
+  margin-right: auto;
+}
+
+.mainLogo {
+  width: 100%;
+  height: auto;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+}
+
+.logInBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin-left: 12.375rem;
+  font-size: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btnImg {
+  width: 1.5625rem;
+  height: auto;
+}
+
+@media (max-width: 425px) {
+  .navDesktopWrapper {
+    display: none;
+  }
+}
