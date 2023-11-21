@@ -15,6 +15,10 @@
   height: auto;
 }
 
+.mainTitle {
+  font-family: var(--font-sedgwick);
+}
+
 .navList {
   display: flex;
   align-items: center;

@@ -7,7 +7,7 @@
   z-index: 1;
   cursor: pointer;
   border: none;
-  background-color: var(--header-bgr);
+  background-color: var(--new-yellow);
 }
 
 .button span {

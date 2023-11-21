@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "network": "vk",
+    "title": "Студия",
+    "url": "https://vk.com/sgrecordingstudio"
+  },
+  {
+    "id": "1",
+    "network": "ok",
+    "title": "Разработка (Kazimir)",
+    "url": "https://ok.ru/profile/537386549092"
+  },
+  {
+    "id": "2",
+    "network": "tg",
+    "title": "Кирилл",
+    "url": "https://t.me/Soundhuaund"
+  },
+  {
+    "id": "3",
+    "network": "yt",
+    "title": "Все об Императоре человечества",
+    "url": "https://youtu.be/iq7RUbWOKAQ"
+  }
+]

@@ -1,0 +1,31 @@
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  color: var(--new-white);
+  transition: all 0.3s;
+}
+
+.linkVk {
+  background-color: var(--vk);
+}
+
+.linkOk {
+  background-color: var(--ok);
+}
+
+.linkTg {
+  background-color: var(--tg);
+}
+
+.linkYt {
+  background-color: var(--yt);
+}
+
+.link:hover {
+  transform: scale(1.03);
+}

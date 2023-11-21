@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 0 20rem;
+}
+
+.container {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.socialList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  width: 50rem;
+  color: var(--new-black);
+}

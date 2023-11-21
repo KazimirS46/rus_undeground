@@ -66,3 +66,12 @@ export type NavItemType = {
   path: string | null;
   submenu: SubNavItem[] | null;
 };
+
+// Новые типы
+
+export type SocialLinkType = {
+  id: string;
+  network: string;
+  title: string;
+  url: string;
+};

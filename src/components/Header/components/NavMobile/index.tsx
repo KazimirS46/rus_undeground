@@ -34,7 +34,7 @@ export const NavMobile = ({ props, overClose, overOpen }: IProps) => {
           className={styles.logoLink}>
           <Image
             alt=''
-            src={'/logo/mainLogo.png'}
+            src={'/icons/mainLogo.svg'}
             priority={false}
             width={41}
             height={45}

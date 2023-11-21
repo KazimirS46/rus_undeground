@@ -5,4 +5,5 @@
   padding: 0.625rem 1.4375rem;
   cursor: pointer;
   white-space: nowrap;
+  font-family: var(--font-roboto);
 }

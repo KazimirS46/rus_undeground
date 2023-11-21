@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Sedgwick_Ave_Display } from 'next/font/google';
 import { NavLink } from './NavLink';
 import { NavSubMenu } from './NavSubMenu';
 import { NavItemType } from '@/types';
@@ -8,6 +9,13 @@ import styles from './index.module.css';
 interface IProps {
   props: NavItemType[] | [];
 }
+
+const sedgwick = Sedgwick_Ave_Display({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sedgwick',
+});
 
 export const NavDesktop = ({ props }: IProps) => {
   const navItem = props;
@@ -19,15 +27,15 @@ export const NavDesktop = ({ props }: IProps) => {
         className={styles.logoLink}>
         <Image
           alt=''
-          src={'/logo/mainLogo.png'}
+          src={'/icons/mainLogo.svg'}
           width={41}
           height={45}
           className={styles.mainLogo}
         />
       </Link>
 
-      <nav>
-        {navItem.length !== 0 && (
+      {navItem.length !== 0 ? (
+        <nav>
           <ul className={styles.navList}>
             {navItem.map(item => (
               <li
@@ -41,8 +49,12 @@ export const NavDesktop = ({ props }: IProps) => {
               </li>
             ))}
           </ul>
-        )}
-      </nav>
+        </nav>
+      ) : (
+        <div className={`${sedgwick.variable}`}>
+          <h1 className={styles.mainTitle}>Russian Underground</h1>
+        </div>
+      )}
 
       <button
         type='button'

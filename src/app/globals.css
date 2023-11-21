@@ -14,10 +14,23 @@
   --submenu-bgr: #eef8ff;
   --submenu-shadow: 0px 6px 24px 0px rgba(97, 115, 147, 0.12);
   --desc-text-color3: #0097ff;
+  --gray: rgba(115, 115, 115, 0.2);
   --transition: 0.15s;
   --swiper-theme-color: #9daac0 !important;
   --swiper-navigation-size: 24px !important;
-  --gray: rgba(115, 115, 115, 0.2);
+
+  /* Новый цвета */
+
+  --new-black: #080708;
+  --new-blue: #3772ff;
+  --new-red: #df2935;
+  --new-yellow: #fdca40;
+  --new-yellow-hover: #d4aa34;
+  --new-white: #e6e8e6;
+  --vk: #0277ff;
+  --ok: #ff7700;
+  --yt: #ff0e00;
+  --tg: #2aa8ea;
 }
 
 * {
@@ -40,31 +53,33 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: var(--text-color);
-  background-color: var(--tags-border-color);
+  color: var(--new-white);
+  background-color: var(--new-black);
   overflow-x: hidden;
 }
 
 header {
   position: fixed;
   width: 100vw;
-  background-color: var(--header-bgr);
+  background-color: var(--new-yellow);
   z-index: 2;
 }
 
 main {
+  padding-top: 7.0625rem;
   flex: 1;
-  background-color: var(--main-bgr-color);
+  color: var(--new-white);
+  background-color: var(--new-black);
 }
 
-section:nth-child(3) .swiper,
+/* section:nth-child(3) .swiper,
 section:nth-child(4) .swiper,
 section:nth-child(5) .swiper,
 section:nth-child(6) .swiper,
 section:nth-child(7) .swiper {
   position: relative;
   overflow-x: visible;
-}
+} */
 
 ul {
   padding: 0;

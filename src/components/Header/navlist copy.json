@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "title": "Links",
+    "path": null,
+    "submenu": [
+      {
+        "id": 0,
+        "title": "Link1",
+        "path": "/"
+      },
+      {
+        "id": 1,
+        "title": "Link2",
+        "path": "/"
+      },
+      {
+        "id": 2,
+        "title": "Link3",
+        "path": "/"
+      }
+    ]
+  }
+]
