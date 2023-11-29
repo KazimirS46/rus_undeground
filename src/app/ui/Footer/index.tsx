@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './index.module.css';
+import MainLogoLink from '../MainLogoLink';
 
 export function Footer() {
   return (
@@ -12,12 +13,8 @@ export function Footer() {
             <p className={styles.date}>2023</p>
           </div>
 
-          <div className={styles.logo}>
-            <Image
-              src={'/footerLogo.svg'}
-              width={32}
-              height={32}
-              alt='logo'></Image>
+          <div className={styles.logoBox}>
+            <MainLogoLink />
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { HeaderNavMobile } from '../HeaderNavMobile';
-import { HeaderNavDesktop } from '../HeaderDeskNav';
+import { HeaderDeskNav } from '../HeaderDeskNav';
 import { HeaderOverlay } from '../HeaderOverlay';
 import { NavItemType } from '@/app/lib/defining-types';
 
@@ -21,7 +21,7 @@ export const HeaderNavigation = ({ props }: IProps) => {
         overClose={() => setOpen(false)}
       />
 
-      <HeaderNavDesktop props={props} />
+      <HeaderDeskNav props={props} />
 
       {open && (
         <HeaderOverlay

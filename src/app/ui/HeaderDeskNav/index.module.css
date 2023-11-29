@@ -5,41 +5,14 @@
   margin: 0 2.25rem 0 2.6875rem;
 }
 
-.logoLink {
+.logoBox a {
+  display: block;
   width: 2.5625rem;
   margin-right: auto;
 }
 
-.mainLogo {
+.logoBox img {
   width: 100%;
-  height: auto;
-}
-
-.mainTitle {
-  font-family: var(--font-sedgwick);
-}
-
-.navList {
-  display: flex;
-  align-items: center;
-}
-
-.logInBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.8125rem;
-  height: 2.8125rem;
-  margin-left: 12.375rem;
-  font-size: 0;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-.btnImg {
-  width: 1.5625rem;
   height: auto;
 }
 
