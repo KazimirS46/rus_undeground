@@ -3,6 +3,7 @@ import HeaderDeskNavLinks from '../HeaderDeskNavLinks';
 import MainLogoLink from '../MainLogoLink';
 import LoginButton from '../LoginButton';
 import styles from './index.module.css';
+import RegButton from '../RegButton';
 
 interface IProps {
   props: NavItemType[] | [];
@@ -16,8 +17,10 @@ export const HeaderDeskNav = ({ props }: IProps) => {
       </div>
 
       <HeaderDeskNavLinks props={props} />
-
-      <LoginButton />
+      <div className={styles.action}>
+        <RegButton />
+        <LoginButton />
+      </div>
     </div>
   );
 };

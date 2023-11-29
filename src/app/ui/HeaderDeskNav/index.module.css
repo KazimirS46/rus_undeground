@@ -16,6 +16,12 @@
   height: auto;
 }
 
+.action {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 12.375rem;
+}
+
 @media (max-width: 425px) {
   .navDesktopWrapper {
     display: none;

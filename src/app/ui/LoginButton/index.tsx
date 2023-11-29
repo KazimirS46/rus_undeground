@@ -6,8 +6,6 @@ function LoginButton() {
     <button
       type='button'
       className={styles.logInBtn}>
-      <span>logIn</span>
-
       <Image
         src={'/loginIcon.svg'}
         alt='LogIn Icon'
@@ -15,6 +13,8 @@ function LoginButton() {
         height={25}
         className={styles.btnImg}
       />
+
+      <span>Войти</span>
     </button>
   );
 }
