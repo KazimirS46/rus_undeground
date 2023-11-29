@@ -2,14 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { NavItemType } from '@/types';
+import { NavItemType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
 
 interface IProps {
   props: NavItemType;
 }
 
-export const NavSubMenu = ({ props }: IProps) => {
+export const HeaderDeskNavSubMenu = ({ props }: IProps) => {
   const pathname = usePathname();
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);

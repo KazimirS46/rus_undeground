@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { DropdownMenuButton } from './components/DropdownMenuButton';
-import { MobileNavBar } from './components/MobileNavBar';
-import { NavItemType } from '@/types';
+import { HeaderMobDropdownMenuButton } from '../HeaderMobDropdownMenuButton';
+import { HeaderMobNavBar } from '../HeaderMobNavBar';
+import { NavItemType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
   overClose: () => void;
 }
 
-export const NavMobile = ({ props, overClose, overOpen }: IProps) => {
+export const HeaderNavMobile = ({ props, overClose, overOpen }: IProps) => {
   const [navIsOpen, setIsOpen] = useState<boolean>(false);
   const navItem = props;
 
@@ -42,14 +42,14 @@ export const NavMobile = ({ props, overClose, overOpen }: IProps) => {
           />
         </Link>
 
-        <DropdownMenuButton
+        <HeaderMobDropdownMenuButton
           isOpen={navIsOpen}
           toggle={navMenuToggle}
         />
       </div>
 
       <div className={styles.dropdownMenu}>
-        <MobileNavBar props={{ navItem, navIsOpen, navMenuToggle }} />
+        <HeaderMobNavBar props={{ navItem, navIsOpen, navMenuToggle }} />
       </div>
     </>
   );

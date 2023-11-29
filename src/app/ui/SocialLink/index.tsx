@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SocialLinkType } from '@/types';
+import { SocialLinkType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
 
 interface IProps {

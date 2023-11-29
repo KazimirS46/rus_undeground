@@ -1,12 +1,12 @@
-import { Navigation } from './components/Navigation';
+import { HeaderNavigation } from '../HeaderNavigation';
 import styles from './index.module.css';
-import navData from '@/components/Header/navlist.json';
+import navData from './navlist.json';
 
 export function Header() {
   return (
     <header>
       <div className={styles.container}>
-        <Navigation props={navData} />
+        <HeaderNavigation props={navData} />
       </div>
     </header>
   );

@@ -6,7 +6,7 @@ interface IProps {
   overClose: () => void;
 }
 
-export const Overlay = ({ overOpen, overClose }: IProps) => {
+export const HeaderOverlay = ({ overOpen, overClose }: IProps) => {
   useEffect(() => {
     document.body.style.position = 'fixed';
     document.body.style.top = `-${window.scrollY}px`;

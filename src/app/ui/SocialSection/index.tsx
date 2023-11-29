@@ -1,7 +1,7 @@
-import { SocialLinkType } from '@/types';
+import { SocialLinkType } from '@/app/lib/defining-types';
 import styles from './inde.module.css';
 
-import { SocialLink } from './components/SocialLink';
+import { SocialLink } from '../SocialLink';
 
 interface IProps {
   socialLinks: SocialLinkType[];

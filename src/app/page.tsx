@@ -1,5 +1,5 @@
-import links from '../components/SocialSection/links.json';
-import { SocialSection } from '@/components/SocialSection';
+import links from '@/app/ui/SocialSection/links.json';
+import { SocialSection } from '@/app/ui/SocialSection';
 
 export default function Home() {
   return (

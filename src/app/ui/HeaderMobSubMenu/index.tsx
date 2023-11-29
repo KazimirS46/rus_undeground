@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { NavItemType } from '@/types';
+import { NavItemType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
 
 interface IProps {
@@ -12,7 +12,13 @@ interface IProps {
   handle: (position: number) => void;
 }
 
-export const SubMenu = ({ info, openSubMenu, idx, handle, close }: IProps) => {
+export const HeaderMobSubMenu = ({
+  info,
+  openSubMenu,
+  idx,
+  handle,
+  close,
+}: IProps) => {
   const pathname = usePathname();
 
   const onClickBtn = () => {

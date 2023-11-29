@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { SubLink } from '../SubLink';
-import { SubMenu } from '../SubMenu';
-import { LogIn } from '../LogIn';
-import { NavItemType } from '@/types';
+import { HeaderMobSubLink } from '../HeaderMobSubLink';
+import { HeaderMobSubMenu } from '../HeaderMobSubMenu';
+import { HeaderMobLogIn } from '../HeaderMobLogIn';
+import { NavItemType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
 
 interface IProps {
@@ -13,7 +13,7 @@ interface IProps {
   };
 }
 
-export const MobileNavBar = ({ props }: IProps) => {
+export const HeaderMobNavBar = ({ props }: IProps) => {
   let menuOpen = props.navIsOpen && styles.active;
 
   const [openState, setOpenState] = useState(
@@ -31,7 +31,7 @@ export const MobileNavBar = ({ props }: IProps) => {
   return (
     <>
       <nav className={`${styles.menu} ${menuOpen}`}>
-        <LogIn />
+        <HeaderMobLogIn />
 
         <ul className={styles.navList}>
           {props.navItem.map((item, index) => (
@@ -39,12 +39,12 @@ export const MobileNavBar = ({ props }: IProps) => {
               key={item.id}
               className={styles.navItem}>
               {item.path ? (
-                <SubLink
+                <HeaderMobSubLink
                   props={item}
                   close={props.navMenuToggle}
                 />
               ) : (
-                <SubMenu
+                <HeaderMobSubMenu
                   info={item}
                   idx={index}
                   openSubMenu={openState[index]}

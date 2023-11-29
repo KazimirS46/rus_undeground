@@ -1,23 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sedgwick_Ave_Display } from 'next/font/google';
-import { NavLink } from './NavLink';
-import { NavSubMenu } from './NavSubMenu';
-import { NavItemType } from '@/types';
+import { HeaderNavLink } from '../HeaderNavLink';
+import { HeaderDeskNavSubMenu } from '../HeaderDeskNavSubMenu';
+import { NavItemType } from '@/app/lib/defining-types';
 import styles from './index.module.css';
+import { sedgwick } from '@/app/lib/defining-fonts';
 
 interface IProps {
   props: NavItemType[] | [];
 }
 
-const sedgwick = Sedgwick_Ave_Display({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-sedgwick',
-});
-
-export const NavDesktop = ({ props }: IProps) => {
+export const HeaderNavDesktop = ({ props }: IProps) => {
   const navItem = props;
 
   return (
@@ -42,9 +35,9 @@ export const NavDesktop = ({ props }: IProps) => {
                 key={item.id}
                 className={styles.navItem}>
                 {item.path ? (
-                  <NavLink props={item} />
+                  <HeaderNavLink props={item} />
                 ) : (
-                  <NavSubMenu props={item} />
+                  <HeaderDeskNavSubMenu props={item} />
                 )}
               </li>
             ))}

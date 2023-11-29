@@ -1,30 +1,30 @@
 'use client';
 
 import { useState } from 'react';
-import { NavDesktop } from '../NavDesktop';
-import { NavMobile } from '../NavMobile';
-import { Overlay } from '../Overlay';
-import { NavItemType } from '@/types';
+import { HeaderNavMobile } from '../HeaderNavMobile';
+import { HeaderNavDesktop } from '../HeaderDeskNav';
+import { HeaderOverlay } from '../HeaderOverlay';
+import { NavItemType } from '@/app/lib/defining-types';
 
 interface IProps {
   props: NavItemType[];
 }
 
-export const Navigation = ({ props }: IProps) => {
+export const HeaderNavigation = ({ props }: IProps) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <NavMobile
+      <HeaderNavMobile
         props={props}
         overOpen={() => setOpen(true)}
         overClose={() => setOpen(false)}
       />
 
-      <NavDesktop props={props} />
+      <HeaderNavDesktop props={props} />
 
       {open && (
-        <Overlay
+        <HeaderOverlay
           overOpen={() => setOpen(true)}
           overClose={() => setOpen(false)}
         />

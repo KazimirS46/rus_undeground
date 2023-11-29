@@ -5,7 +5,7 @@ interface IProps {
   toggle: () => void;
 }
 
-export const DropdownMenuButton = ({ isOpen, toggle }: IProps) => {
+export const HeaderMobDropdownMenuButton = ({ isOpen, toggle }: IProps) => {
   let openButton = isOpen && styles.buttonOpen;
 
   const onClickBtn = () => {
