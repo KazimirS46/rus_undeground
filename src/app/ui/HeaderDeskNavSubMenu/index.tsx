@@ -23,7 +23,7 @@ export const HeaderDeskNavSubMenu = ({ props }: IProps) => {
 
       <Image
         alt='Open Menu'
-        src={'/icons/arrowIcon.svg'}
+        src={'/arrowIcon.svg'}
         width={20}
         height={20}
         className={styles.menuArrow}

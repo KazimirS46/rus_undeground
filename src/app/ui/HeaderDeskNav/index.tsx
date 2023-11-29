@@ -20,7 +20,7 @@ export const HeaderNavDesktop = ({ props }: IProps) => {
         className={styles.logoLink}>
         <Image
           alt=''
-          src={'/icons/mainLogo.svg'}
+          src={'/headerLogo.svg'}
           width={41}
           height={45}
           className={styles.mainLogo}
@@ -55,7 +55,7 @@ export const HeaderNavDesktop = ({ props }: IProps) => {
         <span>logIn</span>
 
         <Image
-          src={'/icons/loginIcon.svg'}
+          src={'/loginIcon.svg'}
           alt='LogIn Icon'
           width={25}
           height={25}

@@ -34,7 +34,7 @@ export const HeaderNavMobile = ({ props, overClose, overOpen }: IProps) => {
           className={styles.logoLink}>
           <Image
             alt=''
-            src={'/icons/mainLogo.svg'}
+            src={'/headerLogo.svg'}
             priority={false}
             width={41}
             height={45}

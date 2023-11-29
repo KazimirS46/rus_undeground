@@ -14,7 +14,7 @@ export function Footer() {
 
           <div className={styles.logo}>
             <Image
-              src={'/icons/mainLogo.svg'}
+              src={'/footerLogo.svg'}
               width={32}
               height={32}
               alt='logo'></Image>
