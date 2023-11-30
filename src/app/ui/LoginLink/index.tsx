@@ -5,7 +5,7 @@ import Link from 'next/link';
 function LoginLink() {
   return (
     <Link
-      href={''}
+      href={'/auth/login'}
       type='button'
       className={styles.logInBtn}>
       <Image

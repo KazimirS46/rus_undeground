@@ -3,9 +3,11 @@ import styles from './index.module.css';
 
 function Registration() {
   return (
-    <div className={styles.container}>
-      <RegistrationForm />
-    </div>
+    <main>
+      <div className={styles.container}>
+        <RegistrationForm />
+      </div>
+    </main>
   );
 }
 

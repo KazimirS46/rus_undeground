@@ -1,7 +1,7 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import RegistrationButton from '../RegistartionButton';
+import Button from '../Button';
 import styles from './index.module.css';
 import { useRouter } from 'next/navigation';
 
@@ -100,7 +100,7 @@ function RegistrationForm() {
         )}
       </div>
 
-      <RegistrationButton />
+      <Button props={{ name: 'Регистрация' }} />
     </form>
   );
 }

@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vh / 100 * 50);
+}
+
+.form h2 {
+  margin-bottom: 1rem;
+  color: var(--new-yellow);
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: var(--new-yellow);
+}
+
+.form input {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  background-color: var(--new-yellow);
+}
+
+.errorMessage {
+  margin-bottom: 0.5rem;
+}
+
+.form span {
+  color: var(--new-red);
+}

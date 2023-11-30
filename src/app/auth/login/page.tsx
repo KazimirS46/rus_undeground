@@ -1,11 +1,14 @@
 import React from 'react';
+import LoginForm from '@/app/ui/LoginForm';
 import styles from './index.module.css';
 
 function Login() {
   return (
-    <div className={styles.container}>
-      <h2>Login Page</h2>
-    </div>
+    <main>
+      <div className={styles.container}>
+        <LoginForm />
+      </div>
+    </main>
   );
 }
 
