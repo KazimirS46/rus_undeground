@@ -4,6 +4,7 @@ import { Header } from '@/app/ui/Header';
 import { Footer } from '@/app/ui/Footer';
 import { roboto } from './lib/defining-fonts';
 import '@/app/ui/globals.css';
+import Providers from './ui/Providers';
 
 export const metadata: Metadata = {
   title: 'Russian Underground',
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <body className={`${roboto.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

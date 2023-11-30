@@ -27,7 +27,6 @@ function LoginForm() {
       password: formData.password,
       redirect: false,
     });
-    console.log(res);
 
     res!.error ? setError(res?.error) : router.push('/dashboard');
   });
