@@ -1,9 +1,9 @@
 import { NavItemType } from '@/app/lib/defining-types';
 import HeaderDeskNavLinks from '../HeaderDeskNavLinks';
 import MainLogoLink from '../MainLogoLink';
-import LoginButton from '../LoginButton';
+import LoginLink from '../LoginLink';
 import styles from './index.module.css';
-import RegButton from '../RegButton';
+import RegLink from '../RegLink';
 
 interface IProps {
   props: NavItemType[] | [];
@@ -18,8 +18,8 @@ export const HeaderDeskNav = ({ props }: IProps) => {
 
       <HeaderDeskNavLinks props={props} />
       <div className={styles.action}>
-        <RegButton />
-        <LoginButton />
+        <RegLink />
+        <LoginLink />
       </div>
     </div>
   );

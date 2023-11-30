@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import styles from './index.module.css';
+import Link from 'next/link';
 
-function LoginButton() {
+function LoginLink() {
   return (
-    <button
+    <Link
+      href={''}
       type='button'
       className={styles.logInBtn}>
       <Image
@@ -15,8 +17,8 @@ function LoginButton() {
       />
 
       <span>Войти</span>
-    </button>
+    </Link>
   );
 }
 
-export default LoginButton;
+export default LoginLink;

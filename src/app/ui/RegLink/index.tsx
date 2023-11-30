@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import styles from './index.module.css';
+import Link from 'next/link';
 
-function RegButton() {
+function RegLink() {
   return (
-    <button
+    <Link
+      href={'/auth/registration'}
       type='button'
       className={styles.regBtn}>
       <Image
@@ -14,8 +16,8 @@ function RegButton() {
       />
 
       <span>Registration</span>
-    </button>
+    </Link>
   );
 }
 
-export default RegButton;
+export default RegLink;
