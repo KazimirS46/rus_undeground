@@ -1,9 +1,11 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import Button from '../Button';
-import styles from './index.module.css';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import Button from '../../Button';
+import styles from './index.module.css';
+import { createUser } from '@/app/lib/actions';
 
 type Inputs = {
   username: string;
@@ -13,6 +15,7 @@ type Inputs = {
 };
 
 function RegistrationForm() {
+  const [pwdError, setPwdError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -22,21 +25,17 @@ function RegistrationForm() {
 
   const formSubmit = handleSubmit(async fieldData => {
     if (fieldData.password !== fieldData.confirmPassword) {
-      return alert('Пароли не совпадают');
+      return setPwdError(true);
+    } else {
+      setPwdError(false);
     }
 
     const { email, password, username } = fieldData;
 
-    const res = await fetch('/api/auth/registration', {
-      method: 'POST',
-      body: JSON.stringify({
-        username: username,
-        email: email,
-        password: password,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const res = await createUser({
+      name: username,
+      email: email,
+      password: password,
     });
 
     if (res.ok) {
@@ -98,6 +97,7 @@ function RegistrationForm() {
         {errors.confirmPassword && (
           <span>{errors.confirmPassword.message}</span>
         )}
+        {pwdError && <p className={styles.errorMessage}>Пароли не совпадают</p>}
       </div>
 
       <Button props={{ name: 'Регистрация' }} />

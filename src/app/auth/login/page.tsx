@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '@/app/ui/LoginForm';
+import LoginForm from '@/app/ui/login/LoginForm';
 import styles from './index.module.css';
 
 function Login() {

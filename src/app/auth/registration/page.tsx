@@ -1,4 +1,4 @@
-import RegistrationForm from '@/app/ui/RegistrationForm';
+import RegistrationForm from '@/app/ui/registration/RegistrationForm';
 import styles from './index.module.css';
 
 function Registration() {

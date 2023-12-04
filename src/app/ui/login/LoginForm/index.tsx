@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import styles from './index.module.css';
-import Button from '../Button';
+import Button from '../../Button';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
