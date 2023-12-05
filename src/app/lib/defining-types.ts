@@ -75,3 +75,12 @@ export type SocialLinkType = {
   title: string;
   url: string;
 };
+
+//типы для авторизации
+
+export type RegistrationFieldsValue = {
+  username: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};

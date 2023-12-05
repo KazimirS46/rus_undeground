@@ -1,16 +1,16 @@
-type Props = {
-  name: string;
-  email: string;
-  password: string;
-};
+import { RegistrationFieldsValue } from './defining-types';
 
-export async function createUser({ name, email, password }: Props) {
+export async function createUser({
+  username,
+  email,
+  password,
+}: RegistrationFieldsValue) {
   return await fetch('/api/auth/registration', {
     method: 'POST',
     body: JSON.stringify({
-      username: name,
-      email: email,
-      password: password,
+      username,
+      email,
+      password,
     }),
     headers: {
       'Content-Type': 'application/json',

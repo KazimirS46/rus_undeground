@@ -4,15 +4,9 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Button from '../../Button';
-import styles from './index.module.css';
 import { createUser } from '@/app/lib/actions';
-
-type Inputs = {
-  username: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-};
+import { RegistrationFieldsValue } from '@/app/lib/defining-types';
+import styles from './index.module.css';
 
 function RegistrationForm() {
   const [pwdError, setPwdError] = useState(false);
@@ -20,7 +14,7 @@ function RegistrationForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<RegistrationFieldsValue>();
   const router = useRouter();
 
   const formSubmit = handleSubmit(async fieldData => {
@@ -30,13 +24,7 @@ function RegistrationForm() {
       setPwdError(false);
     }
 
-    const { email, password, username } = fieldData;
-
-    const res = await createUser({
-      name: username,
-      email: email,
-      password: password,
-    });
+    const res = await createUser(fieldData);
 
     if (res.ok) {
       router.push('/auth/login');
